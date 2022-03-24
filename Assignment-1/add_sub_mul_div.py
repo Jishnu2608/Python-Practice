@@ -1,0 +1,10 @@
+num1=int(input("Enter num1: "))
+num2=int(input("Enter num2: "))
+float1=float(input("Enter a decimal number: "))
+print("Addition: ",num1+num2)
+print("Subtraction: ",num1-float1)
+print("Multiplication: ",num1*float1)
+print("Integer division: ",num1/num2)
+print("Floor division: ",num1//num2)
+print("Modulo division: ",num1%num2)
+
