@@ -5,8 +5,8 @@ class Classroom:
         self.course_name = course_name
         Classroom.clscount +=1
     
-    def displayCount(self):
-     print ("Total Students %d" % Classroom.clscount)
+    def displayCount():
+     print ("Total Students: %d" % Classroom.clscount)
     
     def displayStudent(self):
         print ("Name : ", self.name,  ", Course name: ", self.course_name)
@@ -19,6 +19,6 @@ cls1.displayStudent()
 cls2.displayStudent()
 cls3.displayStudent()
 
-print ("Total Students: %d" % Classroom.clscount)
+Classroom.displayCount()
     
     
