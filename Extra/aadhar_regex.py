@@ -6,8 +6,7 @@ def isValidAadhaarNumber(str):
  
     # Regex to check valid
     # Aadhaar number.
-    regex = ("^[2-9]{1}[0-9]{3}\\" +
-             "s[0-9]{4}\\s[0-9]{4}$")
+    regex = ("^[2-9]{1}[0-9]{3}\\" +"s[0-9]{4}\\s[0-9]{4}$")
      
     # Compile the ReGex
     p = re.compile(regex)
