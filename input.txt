@@ -1,0 +1,3 @@
+Hello.
+This is an input file.
+Greetings people. 
