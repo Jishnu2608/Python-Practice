@@ -19,3 +19,14 @@ class Tic_Tac_Toe():
         self.canvas.pack()
         # Input from user in form of clicks
         self.window.bind('<Button-1>', self.click)
+
+        self.initialize_board()
+        self.player_X_turns = True
+        self.board_status = np.zeros(shape=(3, 3))
+
+        self.player_X_starts = True
+        self.reset_board = False
+        self.gameover = False
+        self.tie = False
+        self.X_wins = False
+        self.O_wins = False
