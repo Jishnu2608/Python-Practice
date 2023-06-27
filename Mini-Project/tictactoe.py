@@ -30,3 +30,10 @@ class Tic_Tac_Toe():
         self.tie = False
         self.X_wins = False
         self.O_wins = False
+
+        self.X_score = 0
+        self.O_score = 0
+        self.tie_score = 0
+
+    def mainloop(self):
+        self.window.mainloop()
