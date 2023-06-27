@@ -37,3 +37,10 @@ class Tic_Tac_Toe():
 
     def mainloop(self):
         self.window.mainloop()
+
+    def initialize_board(self):
+        for i in range(2):
+            self.canvas.create_line((i + 1) * size_of_board / 3, 0, (i + 1) * size_of_board / 3, size_of_board)
+
+        for i in range(2):
+            self.canvas.create_line(0, (i + 1) * size_of_board / 3, size_of_board, (i + 1) * size_of_board / 3)
