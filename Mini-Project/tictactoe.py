@@ -44,3 +44,9 @@ class Tic_Tac_Toe():
 
         for i in range(2):
             self.canvas.create_line(0, (i + 1) * size_of_board / 3, size_of_board, (i + 1) * size_of_board / 3)
+
+    def play_again(self):
+        self.initialize_board()
+        self.player_X_starts = not self.player_X_starts
+        self.player_X_turns = self.player_X_starts
+        self.board_status = np.zeros(shape=(3, 3))
