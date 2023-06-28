@@ -64,3 +64,12 @@ class Tic_Tac_Toe():
         self.canvas.create_oval(grid_position[0] - symbol_size, grid_position[1] - symbol_size,
                                 grid_position[0] + symbol_size, grid_position[1] + symbol_size, width=symbol_thickness,
                                 outline=symbol_O_color)
+        
+    def draw_X(self, logical_position):
+        grid_position = self.convert_logical_to_grid_position(logical_position)
+        self.canvas.create_line(grid_position[0] - symbol_size, grid_position[1] - symbol_size,
+                                grid_position[0] + symbol_size, grid_position[1] + symbol_size, width=symbol_thickness,
+                                fill=symbol_X_color)
+        self.canvas.create_line(grid_position[0] - symbol_size, grid_position[1] + symbol_size,
+                                grid_position[0] + symbol_size, grid_position[1] - symbol_size, width=symbol_thickness,
+                                fill=symbol_X_color)
