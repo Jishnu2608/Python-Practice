@@ -91,3 +91,9 @@ class Tic_Tac_Toe():
             self.tie_score += 1
             text = 'Its a tie'
             color = 'gray'
+
+        self.canvas.delete("all")
+        self.canvas.create_text(size_of_board / 2, size_of_board / 3, font=("cmr", main_font_size, "bold"), fill=color, text=text)
+
+        score_text = 'Scores \n'
+        self.canvas.create_text(size_of_board / 2, 5 * size_of_board / 8, font=("cmr", score_font_size, "bold"), fill=Green_color, text=score_text)
