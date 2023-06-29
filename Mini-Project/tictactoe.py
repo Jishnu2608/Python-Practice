@@ -73,3 +73,21 @@ class Tic_Tac_Toe():
         self.canvas.create_line(grid_position[0] - symbol_size, grid_position[1] + symbol_size,
                                 grid_position[0] + symbol_size, grid_position[1] - symbol_size, width=symbol_thickness,
                                 fill=symbol_X_color)
+    def display_gameover(self):
+        # Calculate appropriate font sizes based on the size of the board
+        main_font_size = int(size_of_board / 15)
+        score_font_size = int(size_of_board / 20)
+        button_font_size = int(size_of_board / 30)
+
+        if self.X_wins:
+            self.X_score += 1
+            text = 'Winner: Player 1 (X)'
+            color = symbol_X_color
+        elif self.O_wins:
+            self.O_score += 1
+            text = 'Winner: Player 2 (O)'
+            color = symbol_O_color
+        else:
+            self.tie_score += 1
+            text = 'Its a tie'
+            color = 'gray'
