@@ -12,4 +12,6 @@ class RealTimeCurrencyConverter:
     def convert(self, from_currency, to_currency, amount):
         if from_currency != 'USD':
             amount = amount / self.currencies[from_currency]
-    
+            
+        amount = round(amount * self.currencies[to_currency], 4)
+        return amount
