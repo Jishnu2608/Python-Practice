@@ -26,3 +26,11 @@ class automateWhatsapp:
                 flag = True if flag == 'Y' else False
             else:   
                 print('enter contact number again.')
+
+    def send_message(self):
+        message = input("Enter message you want to send..")
+        for contact_num in self.contact_list:
+            if len(message) == 0:
+                message = input("Oops! you entered empty message please re-enter message")
+            wthelp.sendwhatmsg_instantly(phone_no=contact_num, message=message, wait_time=12,tab_close=True)
+            print(f'successfully sent message to contact number {contact_num}')
