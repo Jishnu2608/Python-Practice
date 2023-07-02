@@ -12,6 +12,13 @@ class RealTimeCurrencyConverter:
     def convert(self, from_currency, to_currency, amount):
         if from_currency != 'USD':
             amount = amount / self.currencies[from_currency]
-            
+
         amount = round(amount * self.currencies[to_currency], 4)
         return amount
+
+class App(tk.Tk):
+
+    def __init__(self, converter):
+        tk.Tk.__init__(self)
+        self.title('Currency Converter')
+        self.currency_converter = converter
