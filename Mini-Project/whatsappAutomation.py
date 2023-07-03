@@ -40,3 +40,20 @@ class automateWhatsapp:
         for contact_num in self.contact_list:
             wthelp.sendwhats_image(receiver=contact_num, img_path=image_path, wait_time=12, tab_close=True)
             print(f'successfully sent images to contact number {contact_num}')
+
+if __name__ == '__main__':
+
+    print("Enter 1 to send message to the user")
+    print("Enter 2 to send image to the user")
+    print("Enter 3 to send image and message to the user")
+    user_input = int(input())
+
+    if user_input > 3 or user_input <= 0:
+       print('invalid option')
+       exit()
+
+    w = automateWhatsapp()
+    if user_input == 1 or user_input == 3:
+        w.send_message()  
+    if user_input == 2 or user_input == 3:
+        w.send_image() 
