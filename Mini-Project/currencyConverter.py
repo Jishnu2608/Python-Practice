@@ -22,3 +22,11 @@ class App(tk.Tk):
         tk.Tk.__init__(self)
         self.title('Currency Converter')
         self.currency_converter = converter
+
+        # self.configure(background = 'light-gray')
+        self.geometry("530x250")
+
+        # Label
+        self.intro_label = Label(self, text='Realtime Currency Converter', fg='black', bg='lightblue', relief=tk.RAISED, borderwidth=3)
+        self.intro_label.config(font=('Helvetica', 15, 'bold'))
+        self.intro_label.place(relx=0.5, rely=0.08, anchor=tk.CENTER)
