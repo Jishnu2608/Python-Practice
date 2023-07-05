@@ -41,3 +41,11 @@ class App(tk.Tk):
         self.amount_field = Entry(self, bd=3, relief=tk.RIDGE, justify=tk.CENTER, validate='key', validatecommand=valid)
         self.converted_amount_field_label = Label(self, text='', fg='black', bg='white', relief=tk.RIDGE,
                                                   justify=tk.CENTER, width=17, borderwidth=3)
+
+        # dropdown
+        self.from_currency_variable = StringVar(self)
+        self.from_currency_variable.set("INR")  # default value
+        self.to_currency_variable = StringVar(self)
+        self.to_currency_variable.set("USD")  # default value
+
+        
