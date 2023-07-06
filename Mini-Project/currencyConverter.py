@@ -48,4 +48,7 @@ class App(tk.Tk):
         self.to_currency_variable = StringVar(self)
         self.to_currency_variable.set("USD")  # default value
 
-        
+        font = ("Helvetica", 12, "bold")
+        self.option_add('*TCombobox*Listbox.font', font)
+        self.from_currency_dropdown = ttk.Combobox(self, textvariable=self.from_currency_variable, values=list(self.currency_converter.currencies.keys()), font=font, state='readonly', width=12, justify=tk.CENTER)
+
