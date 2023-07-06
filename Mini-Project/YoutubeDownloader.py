@@ -11,3 +11,14 @@ video_url = input("Enter The Url of Video You Want To Download")
 youtube = pytube.YouTube(video_url)  
 video = youtube.streams.first() 
 
+# Downloading Video to Downloading Folder( Remember to Change the Path Here :)
+video.download('C:\Users\YourUser\Downloads')
+
+# Print the Info About Dowloading Status
+print("Downloding....")   
+print("Downloding...")   
+print("Downloding....")   
+print("Downloding...")   
+print("Downloding..")   
+print("Downloding.")
+print("Done Video Downloaded Successfully")  
