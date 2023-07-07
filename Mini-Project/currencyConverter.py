@@ -52,3 +52,8 @@ class App(tk.Tk):
         self.option_add('*TCombobox*Listbox.font', font)
         self.from_currency_dropdown = ttk.Combobox(self, textvariable=self.from_currency_variable, values=list(self.currency_converter.currencies.keys()), font=font, state='readonly', width=12, justify=tk.CENTER)
 
+        self.to_currency_dropdown = ttk.Combobox(self, textvariable=self.to_currency_variable, values=list(self.currency_converter.currencies.keys()), font=font, state='readonly', width=12, justify=tk.CENTER)
+
+        # placing
+        self.from_currency_dropdown.place(x=30, y=120)
+        self.amount_field.place(x=36, y=150)
