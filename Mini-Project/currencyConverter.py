@@ -57,3 +57,11 @@ class App(tk.Tk):
         # placing
         self.from_currency_dropdown.place(x=30, y=120)
         self.amount_field.place(x=36, y=150)
+        self.to_currency_dropdown.place(x=340, y=120)
+        # self.converted_amount_field.place(x = 346, y = 150)
+        self.converted_amount_field_label.place(x=346, y=150)
+
+        # Convert button
+        self.convert_button = Button(self, text="Convert", fg="black", bg="green", command=self.perform)
+        self.convert_button.config(font=('Helvetica', 10, 'bold'))
+        self.convert_button.place(x=225, y=135)
