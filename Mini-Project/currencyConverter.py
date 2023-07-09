@@ -70,3 +70,8 @@ class App(tk.Tk):
         amount = float(self.amount_field.get())
         from_curr = self.from_currency_variable.get()
         to_curr = self.to_currency_variable.get()
+
+        converted_amount = self.currency_converter.convert(from_curr, to_curr, amount)
+        converted_amount = round(converted_amount, 2)
+
+        self.converted_amount_field_label.config(text=str(converted_amount))
