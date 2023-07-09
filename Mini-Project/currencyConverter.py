@@ -65,3 +65,8 @@ class App(tk.Tk):
         self.convert_button = Button(self, text="Convert", fg="black", bg="green", command=self.perform)
         self.convert_button.config(font=('Helvetica', 10, 'bold'))
         self.convert_button.place(x=225, y=135)
+
+    def perform(self):
+        amount = float(self.amount_field.get())
+        from_curr = self.from_currency_variable.get()
+        to_curr = self.to_currency_variable.get()
