@@ -75,3 +75,9 @@ class App(tk.Tk):
         converted_amount = round(converted_amount, 2)
 
         self.converted_amount_field_label.config(text=str(converted_amount))
+
+    def restrictNumberOnly(self, action, string):
+        regex = re.compile(
+            r"[0-9,]*?(\.)?[0-9,]*$")  # prevent users from entering non-numeric characters or multiple decimal points
+        result = regex.match(string)
+        return string == "" or (string.count('.') <= 1 and result is not None)
