@@ -81,3 +81,10 @@ class App(tk.Tk):
             r"[0-9,]*?(\.)?[0-9,]*$")  # prevent users from entering non-numeric characters or multiple decimal points
         result = regex.match(string)
         return string == "" or (string.count('.') <= 1 and result is not None)
+
+
+if __name__ == '__main__':
+    url = 'https://api.exchangerate-api.com/v4/latest/USD'
+    converter = RealTimeCurrencyConverter(url)
+    App(converter)
+    mainloop()
