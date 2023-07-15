@@ -28,3 +28,13 @@ label2=tk.Label(root,text="Choose an Operation",width=25,bg="LightBlue")
 label2.config(font=bold_font)
 canvas.create_window(200,200,window=label2)
 
+#tkinter IntVar to store selected operation choice
+v = tk.IntVar()
+
+#Function to handle the choice of encryption or decryption
+def choice():
+    x = v.get()
+    if(x==1):
+        encryption()
+    elif(x==2):
+        decryption()
