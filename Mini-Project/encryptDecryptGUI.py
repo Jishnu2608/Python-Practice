@@ -19,3 +19,12 @@ label1 = tk.Label(root,text= "Enter the Text",width=20,bg="LightBlue")
 label1.config(font=bold_font)
 canvas.create_window(200,100,window=label1)
 
+#Create an entry widget for user input
+user_text = tk.Entry(root)
+canvas.create_window(200,150,window=user_text)
+
+#Create a label for selecting the operation
+label2=tk.Label(root,text="Choose an Operation",width=25,bg="LightBlue")
+label2.config(font=bold_font)
+canvas.create_window(200,200,window=label2)
+
