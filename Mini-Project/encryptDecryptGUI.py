@@ -38,3 +38,11 @@ def choice():
         encryption()
     elif(x==2):
         decryption()
+        
+#Create radio buttons
+label3=tk.Radiobutton(root, text="Encryption",padx = 20, variable=v, value=1,command=choice,bg="light yellow")
+label3.config(font=bold_font)
+canvas.create_window(100,250,window=label3)
+label4=tk.Radiobutton(root, text="Decryption",padx = 20, variable=v, value=2,command=choice,bg="light yellow")
+label4.config(font=bold_font)
+canvas.create_window(300,250,window=label4)
