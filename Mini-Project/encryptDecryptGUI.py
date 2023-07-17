@@ -38,7 +38,7 @@ def choice():
         encryption()
     elif(x==2):
         decryption()
-        
+
 #Create radio buttons
 label3=tk.Radiobutton(root, text="Encryption",padx = 20, variable=v, value=1,command=choice,bg="light yellow")
 label3.config(font=bold_font)
@@ -46,3 +46,24 @@ canvas.create_window(100,250,window=label3)
 label4=tk.Radiobutton(root, text="Decryption",padx = 20, variable=v, value=2,command=choice,bg="light yellow")
 label4.config(font=bold_font)
 canvas.create_window(300,250,window=label4)
+
+def encryption():
+    plain_text = user_text.get() #get input from user
+    cipher_text = ""
+    key = 3 #set encryption key
+
+    # loop through each character in plain text
+    for i in range(len(plain_text)):
+        letter = plain_text[i]
+        if(letter.isupper()):
+
+            #encrypt uppercase letters using the key and modulo 26 to wrap around the alphabet
+            cipher_text+=chr((ord(letter)+key-65)%26+65)
+        else:
+            #encrypt lowercase letters using the key and modulo 26 to wrap around the alphabet
+            cipher_text+=chr((ord(letter)+key-97)%26+97)
+
+    #display the cipher text
+    label5 =tk.Label(root,text=cipher_text,width=20,bg="light yellow")
+    label5.config(font=bold_font)
+    canvas.create_window(200,350,window=label5)
