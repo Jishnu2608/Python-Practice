@@ -67,3 +67,25 @@ def encryption():
     label5 =tk.Label(root,text=cipher_text,width=20,bg="light yellow")
     label5.config(font=bold_font)
     canvas.create_window(200,350,window=label5)
+
+
+def decryption():
+    cipher_text = user_text.get() #get input from user
+    plain_text = ""
+    key = 3 #set encryption key
+
+    #loop through each character in plain text
+    for i in range(len(cipher_text)):
+        letter = cipher_text[i]
+        if(letter.isupper()):
+
+            #decrypt uppercase letters using the key and modulo 26 to wrap around the alphabet
+            plain_text+=chr((ord(letter)-key-65)%26+65)
+        else:
+            #decrypt lowercase letters using the key and modulo 26 to wrap around the alphabet
+            plain_text+=chr((ord(letter)-key-97)%26+97)
+
+    #display the plain text
+    label6 =tk.Label(root,text=plain_text,width=20,bg="light yellow")
+    label6.config(font=bold_font)
+    canvas.create_window(200,350,window=label6)
