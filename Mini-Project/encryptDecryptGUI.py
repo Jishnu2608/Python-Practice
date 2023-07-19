@@ -89,3 +89,11 @@ def decryption():
     label6 =tk.Label(root,text=plain_text,width=20,bg="light yellow")
     label6.config(font=bold_font)
     canvas.create_window(200,350,window=label6)
+
+#Create a label to display the converted text
+label7 =tk.Label(root,text="Converted Text ",width=20,bg="LightBlue")
+label7.config(font=bold_font)
+canvas.create_window(200,300,window=label7)
+
+#start main event loop
+root.mainloop()
