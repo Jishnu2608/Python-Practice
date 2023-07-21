@@ -10,3 +10,12 @@ class Units:
         self.root.title("Units Conversion")
         self.root.geometry("500x400")
         self.root.resizable(0, 0)
+
+        froms = StringVar()
+        to = StringVar()
+        value = StringVar()
+        answer = StringVar()
+
+        def on_enter1(e):
+            but_convert['background'] = "black"
+            but_convert['foreground'] = "cyan"
