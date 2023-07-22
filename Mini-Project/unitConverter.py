@@ -19,3 +19,11 @@ class Units:
         def on_enter1(e):
             but_convert['background'] = "black"
             but_convert['foreground'] = "cyan"
+
+        def on_leave1(e):
+            but_convert['background'] = "SystemButtonFace"
+            but_convert['foreground'] = "SystemButtonText"
+
+        def on_enter2(e):
+            but_clear['background'] = "black"
+            but_clear['foreground'] = "cyan"
