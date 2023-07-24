@@ -38,3 +38,18 @@ class Units:
             froms.set("Select Units Convert From")
             to.set("Select Units Convert To")
             real_answer.config(text="")
+
+        def convert():
+            try:
+                if froms.get() != "Select Units Convert From":
+                    if to.get() != "Select Units Convert To":
+                        if len(value.get()) != 0:
+
+                            url = 'https://neutrinoapi.net/convert'
+                            params = {
+                                'user-id': 'Reonnie26',
+                                'api-key': 'vNwdgPrG9wDjU9xD0srq4VWr2JG6s6DyOd0XHLkJKQi2ikHC',
+                                'from-value': '{}'.format(value.get()),
+                                'from-type': '{}'.format(froms.get()),
+                                'to-type': '{}'.format(to.get())
+                            }
