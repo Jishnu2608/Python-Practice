@@ -27,3 +27,14 @@ class Units:
         def on_enter2(e):
             but_clear['background'] = "black"
             but_clear['foreground'] = "cyan"
+
+        def on_leave2(e):
+            but_clear['background'] = "SystemButtonFace"
+            but_clear['foreground'] = "SystemButtonText"
+
+        def clear():
+            answer.set("")
+            value.set("")
+            froms.set("Select Units Convert From")
+            to.set("Select Units Convert To")
+            real_answer.config(text="")
