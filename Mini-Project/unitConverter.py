@@ -48,8 +48,15 @@ class Units:
                             url = 'https://neutrinoapi.net/convert'
                             params = {
                                 'user-id': 'Reonnie26',
-                                'api-key': 'vNwdgPrG9wDjU9xD0srq4VWr2JG6s6DyOd0XHLkJKQi2ikHC',
+                                'api-key': '[YOUR_API_KEY]',
                                 'from-value': '{}'.format(value.get()),
                                 'from-type': '{}'.format(froms.get()),
                                 'to-type': '{}'.format(to.get())
                             }
+
+                            postdata = parse.urlencode(params).encode()
+                            req = request.Request(url, data=postdata)
+                            response = request.urlopen(req)
+                            result = json.loads(response.read().decode("utf-8"))
+                            name = json.dumps(result, indent=4)
+                            real_answer = result['result-float']
