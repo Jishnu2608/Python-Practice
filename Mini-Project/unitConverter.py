@@ -60,3 +60,20 @@ class Units:
                             result = json.loads(response.read().decode("utf-8"))
                             name = json.dumps(result, indent=4)
                             real_answer = result['result-float']
+                            to_type = result['to-type']
+                            from_type = result['from-type']
+                            answers = f"{value.get()} {from_type} = {real_answer} {to_type}"
+                            answer.set(real_answer)
+
+                            real_answer.config(text=answers)
+
+                        else:
+                            tkinter.messagebox.showerror("Error", "Please Enter the value for convertion")
+                    else:
+                        tkinter.messagebox.showerror("Error", "Please Select Units to convert to")
+                else:
+                    tkinter.messagebox.showerror("Error", "Please Select the Units to convert")
+
+            except Exception as e:
+                tkinter.messagebox.showerror("Error", "Network Error / Your daily request may be ended")
+                print(e)
