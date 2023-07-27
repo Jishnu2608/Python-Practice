@@ -77,3 +77,15 @@ class Units:
             except Exception as e:
                 tkinter.messagebox.showerror("Error", "Network Error / Your daily request may be ended")
                 print(e)
+
+                
+        def res():
+            ans = "8 Bit = 1 byte"
+            real_answer.config(text=ans)
+
+        # =========================frame====================#
+
+        mainframe = Frame(self.root, width=500, height=400, relief="ridge", bd=3, bg="gray44")
+        mainframe.place(x=0, y=0)
+
+        # ===================================================#
