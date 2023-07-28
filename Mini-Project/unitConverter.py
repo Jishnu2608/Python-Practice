@@ -78,7 +78,7 @@ class Units:
                 tkinter.messagebox.showerror("Error", "Network Error / Your daily request may be ended")
                 print(e)
 
-                
+
         def res():
             ans = "8 Bit = 1 byte"
             real_answer.config(text=ans)
@@ -89,3 +89,15 @@ class Units:
         mainframe.place(x=0, y=0)
 
         # ===================================================#
+
+        select_units_from = ['Amp', 'Bit', 'Byte', 'Celsius', 'Day', 'Degree', 'Fahrenheit', 'Feet', 'Gallon', 'Gram', 'Hour', 'Inch', 'Joule', 'Kelvin', 'Liter', 'Meter', 'Micron', 'Mile', 'Minute', 'Mole', 'Month', 'Newton', 'Ohm', 'Ounce', 'Pascal', 'Pint', 'Pound', 'Radian','Second', 'Tonne', 'Volt', 'Watt', 'Week', 'Yard']
+        select_units_from_combo = Combobox(mainframe, textvariable=froms, values=select_units_from, font=('arial', 14),
+                                           width=23, state="readonly")
+        select_units_from_combo.set("Select Units Convert From")
+        select_units_from_combo.place(x=110, y=10)
+
+        select_units_to = ['Amp', 'Bit', 'Byte', 'Celsius', 'Day', 'Degree', 'Fahrenheit', 'Feet', 'Gallon', 'Gram', 'Hour', 'Inch', 'Joule', 'Kelvin', 'Liter', 'Meter', 'Micron', 'Mile', 'Minute', 'Mole', 'Month', 'Newton', 'Ohm', 'Ounce', 'Pascal', 'Pint', 'Pound', 'Radian', 'Second', 'Tonne', 'Volt', 'Watt', 'Week', 'Yard']
+
+        select_units_to_combo = Combobox(mainframe, textvariable=to, values=select_units_to, font=('arial', 14), width=23, state="readonly")
+        select_units_to_combo.set("Select Units Convert To")
+        select_units_to_combo.place(x=110, y=70)
