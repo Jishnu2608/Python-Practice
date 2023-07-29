@@ -101,3 +101,12 @@ class Units:
         select_units_to_combo = Combobox(mainframe, textvariable=to, values=select_units_to, font=('arial', 14), width=23, state="readonly")
         select_units_to_combo.set("Select Units Convert To")
         select_units_to_combo.place(x=110, y=70)
+
+        lab_enter_value = Label(mainframe, text="Enter Value", font=('times new roman', 14), bg="gray44", fg="white")
+        lab_enter_value.place(x=180, y=120)
+
+        ent_value = Entry(mainframe, textvariable=value, width=29, font=('times new roman', 14), relief="ridge", bd=4)
+        ent_value.place(x=110, y=160)
+
+        lab_answer = Label(mainframe, text="Answer", font=('times new roman', 14), bg="gray44", fg="white")
+        lab_answer.place(x=200, y=200)
