@@ -110,3 +110,14 @@ class Units:
 
         lab_answer = Label(mainframe, text="Answer", font=('times new roman', 14), bg="gray44", fg="white")
         lab_answer.place(x=200, y=200)
+
+        ent_answer = Entry(mainframe, textvariable=answer, width=29, font=('times new roman', 14), relief="ridge", bd=4)
+        ent_answer.place(x=110, y=230)
+
+        real_answer = Label(mainframe, text="", font=('times new roman', 14), bg="gray44", fg="white")
+        real_answer.place(x=160, y=280)
+
+        but_convert = Button(mainframe, width=20, text="Convert", font=('times new roman', 14), cursor="hand2",command = convert)
+        but_convert.place(x=20, y=340)
+        but_convert.bind("<Enter>", on_enter1)
+        but_convert.bind("<Leave>", on_leave1)
