@@ -126,3 +126,8 @@ class Units:
         but_clear.place(x=263, y=340)
         but_clear.bind("<Enter>", on_enter2)
         but_clear.bind("<Leave>", on_leave2)
+
+if __name__ == "__main__":
+    root = Tk()
+    Units(root)
+    root.mainloop()
