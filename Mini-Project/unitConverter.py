@@ -121,3 +121,8 @@ class Units:
         but_convert.place(x=20, y=340)
         but_convert.bind("<Enter>", on_enter1)
         but_convert.bind("<Leave>", on_leave1)
+
+        but_clear = Button(mainframe, width=20, text="Clear", font=('times new roman', 14), cursor="hand2",command=clear)
+        but_clear.place(x=263, y=340)
+        but_clear.bind("<Enter>", on_enter2)
+        but_clear.bind("<Leave>", on_leave2)
