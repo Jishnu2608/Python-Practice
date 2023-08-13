@@ -113,3 +113,9 @@ class Tetris:
         self.current_piece = self.new_piece()
         self.game_over = False
         self.score = 0  # Add score attribute
+
+    def new_piece(self):
+        # Choose a random shape
+        shape = random.choice(SHAPES)
+        # Return a new Tetromino object
+        return Tetromino(self.width // 2, 0, shape)
