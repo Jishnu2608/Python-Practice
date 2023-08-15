@@ -3,3 +3,8 @@ from tkinter import *
 import tkinter as tk
 from tkinter import ttk
 import re
+
+class RealTimeCurrencyConverter:
+    def __init__(self, url):
+        self.data = requests.get(url).json()
+        self.currencies = self.data['rates']
