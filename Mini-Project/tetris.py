@@ -120,7 +120,7 @@ class Tetris:
         # Return a new Tetromino object
         return Tetromino(self.width // 2, 0, shape)
     
-    
+
     def valid_move(self, piece, x, y, rotation):
         """Check if the piece can move to the given position"""
         for i, row in enumerate(piece.shape[(piece.rotation + rotation) % len(piece.shape)]):
@@ -131,3 +131,14 @@ class Tetris:
                 except IndexError:
                     return False
         return True
+    
+    
+    def clear_lines(self):
+        """Clear the lines that are full and return the number of cleared lines"""
+        lines_cleared = 0
+        for i, row in enumerate(self.grid[:-1]):
+            if all(cell != 0 for cell in row):
+                lines_cleared += 1
+                del self.grid[i]
+                self.grid.insert(0, [0 for _ in range(self.width)])
+        return lines_cleared
