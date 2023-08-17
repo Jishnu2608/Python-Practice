@@ -207,3 +207,12 @@ def main():
     fall_speed = 50  # You can adjust this value to change the falling speed, it's in milliseconds
     while True:
         screen.fill(BLACK)
+
+        for event in pygame.event.get():
+            # Check for the QUIT event
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
+            # Check for the KEYDOWN event
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_LEFT:
