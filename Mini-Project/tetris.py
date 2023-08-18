@@ -158,3 +158,11 @@ class Tetris:
         if not self.valid_move(self.current_piece, 0, 0, 0):
             self.game_over = True
         return lines_cleared
+
+    def update(self):
+        """Move the tetromino down one cell"""
+        if not self.game_over:
+            if self.valid_move(self.current_piece, 0, 1, 0):
+                self.current_piece.y += 1
+            else:
+                self.lock_piece(self.current_piece)
