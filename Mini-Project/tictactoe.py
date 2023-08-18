@@ -114,3 +114,13 @@ class Tic_Tac_Toe():
     def convert_logical_to_grid_position(self, logical_position):
         logical_position = np.array(logical_position, dtype=int)
         return (size_of_board / 3) * logical_position + size_of_board / 6
+    
+    def convert_grid_to_logical_position(self, grid_position):
+        grid_position = np.array(grid_position)
+        return np.array(grid_position // (size_of_board / 3), dtype=int)
+
+    def is_grid_occupied(self, logical_position):
+        if self.board_status[logical_position[0]][logical_position[1]] == 0:
+            return False
+        else:
+            return True
