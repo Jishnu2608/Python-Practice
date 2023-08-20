@@ -124,3 +124,14 @@ class Tic_Tac_Toe():
             return False
         else:
             return True
+        
+    def is_winner(self, player):
+
+        player = -1 if player == 'X' else 1
+
+        # Three in a row
+        for i in range(3):
+            if self.board_status[i][0] == self.board_status[i][1] == self.board_status[i][2] == player:
+                return True
+            if self.board_status[0][i] == self.board_status[1][i] == self.board_status[2][i] == player:
+                return True
