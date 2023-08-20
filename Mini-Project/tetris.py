@@ -166,3 +166,19 @@ class Tetris:
                 self.current_piece.y += 1
             else:
                 self.lock_piece(self.current_piece)
+
+    def draw(self, screen):
+        """Draw the grid and the current piece"""
+        for y, row in enumerate(self.grid):
+            for x, cell in enumerate(row):
+                if cell:
+                    pygame.draw.rect(screen, cell, (x * GRID_SIZE, y * GRID_SIZE, GRID_SIZE - 1, GRID_SIZE - 1))
+
+        if self.current_piece:
+            for i, row in enumerate(
+                    self.current_piece.shape[self.current_piece.rotation % len(self.current_piece.shape)]):
+                for j, cell in enumerate(row):
+                    if cell == 'O':
+                        pygame.draw.rect(screen, self.current_piece.color, (
+                        (self.current_piece.x + j) * GRID_SIZE, (self.current_piece.y + i) * GRID_SIZE, GRID_SIZE - 1,
+                        GRID_SIZE - 1))
