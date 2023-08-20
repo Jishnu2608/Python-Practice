@@ -135,3 +135,12 @@ class Tic_Tac_Toe():
                 return True
             if self.board_status[0][i] == self.board_status[1][i] == self.board_status[2][i] == player:
                 return True
+            
+    # Diagonals
+        if self.board_status[0][0] == self.board_status[1][1] == self.board_status[2][2] == player:
+            return True
+
+        if self.board_status[0][2] == self.board_status[1][1] == self.board_status[2][0] == player:
+            return True
+
+        return False
