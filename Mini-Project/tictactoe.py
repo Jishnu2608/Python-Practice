@@ -144,3 +144,12 @@ class Tic_Tac_Toe():
             return True
 
         return False
+    
+    def is_tie(self):
+
+        r, c = np.where(self.board_status == 0)
+        tie = False
+        if len(r) == 0:
+            tie = True
+
+        return tie
