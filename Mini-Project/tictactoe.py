@@ -163,4 +163,13 @@ class Tic_Tac_Toe():
             self.tie = self.is_tie()
 
         gameover = self.X_wins or self.O_wins or self.tie
+
+        if self.X_wins:
+            print('X wins')
+        if self.O_wins:
+            print('O wins')
+        if self.tie:
+            print('Its a tie')
+
+        return gameover
     
