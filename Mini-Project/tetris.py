@@ -194,3 +194,16 @@ def draw_game_over(screen, x, y):
     font = pygame.font.Font(None, 48)
     text = font.render("Game Over", True, RED)
     screen.blit(text, (x, y))
+
+def main():
+    # Initialize pygame
+    screen = pygame.display.set_mode((WIDTH, HEIGHT))
+    pygame.display.set_caption('Tetris')
+    # Create a clock object
+    clock = pygame.time.Clock()
+    # Create a Tetris object
+    game = Tetris(WIDTH // GRID_SIZE, HEIGHT // GRID_SIZE)
+    fall_time = 0
+    fall_speed = 50  # You can adjust this value to change the falling speed, it's in milliseconds
+    while True:
+        screen.fill(BLACK)
