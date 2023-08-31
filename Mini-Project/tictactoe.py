@@ -173,3 +173,14 @@ class Tic_Tac_Toe():
 
         return gameover
     
+    def click(self, event):
+        grid_position = [event.x, event.y]
+        logical_position = self.convert_grid_to_logical_position(grid_position)
+
+        if not self.reset_board:
+            if self.player_X_turns:
+                if not self.is_grid_occupied(logical_position):
+                    self.draw_X(logical_position)
+                    self.board_status[logical_position[0]][logical_position[1]] = -1
+                    self.player_X_turns = not self.player_X_turns
+    
