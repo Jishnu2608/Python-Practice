@@ -183,4 +183,13 @@ class Tic_Tac_Toe():
                     self.draw_X(logical_position)
                     self.board_status[logical_position[0]][logical_position[1]] = -1
                     self.player_X_turns = not self.player_X_turns
-    
+                else:
+                    if not self.is_grid_occupied(logical_position):
+                        self.draw_O(logical_position)
+                        self.board_status[logical_position[0]][logical_position[1]] = 1
+                        self.player_X_turns = not self.player_X_turns
+
+            # Check if game is concluded
+                if self.is_gameover():
+                    self.display_gameover()
+                    # print('Done')
