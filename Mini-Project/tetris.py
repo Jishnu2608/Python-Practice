@@ -231,3 +231,12 @@ def main():
                     while game.valid_move(game.current_piece, 0, 1, 0):
                         game.current_piece.y += 1  # Move the piece down until it hits the bottom
                     game.lock_piece(game.current_piece) 
+        # Get the number of milliseconds since the last frame
+        delta_time = clock.get_rawtime()
+        # Add the delta time to the fall time
+        fall_time += delta_time
+        if fall_time >= fall_speed:
+            # Move the piece down
+            game.update()
+            # Reset the fall time
+            fall_time = 0
