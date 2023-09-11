@@ -9,3 +9,8 @@ def fetch_quote():
     quote = data["content"]
     author = data["author"]
     return quote, author
+
+def update_quote():
+    quote,author = fetch_quote()
+    quote_label.config(text=quote)
+    author_label.config(text=f"~{author}")
