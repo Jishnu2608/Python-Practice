@@ -14,3 +14,13 @@ def update_quote():
     quote,author = fetch_quote()
     quote_label.config(text=quote)
     author_label.config(text=f"~{author}")
+
+root = ttk.Window(themename="pulse")
+root.title("Quotes generator")
+root.geometry("700x250")
+
+frame = ttk.Frame(root)
+frame.pack(padx=30, pady=40)
+
+quote_label = ttk.Label(frame, text="", font=("Helvetica", 16), wraplength=650)
+quote_label.pack()
