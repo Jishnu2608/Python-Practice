@@ -24,3 +24,10 @@ frame.pack(padx=30, pady=40)
 
 quote_label = ttk.Label(frame, text="", font=("Helvetica", 16), wraplength=650)
 quote_label.pack()
+
+author_label = ttk.Label(frame, text="", font=("Helvetica", 12))
+author_label.pack(pady=10)
+
+ttk.Button(frame, text="Get Quote", command=update_quote).pack(pady=20)
+
+root.mainloop()
