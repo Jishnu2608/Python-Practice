@@ -193,3 +193,12 @@ class Tic_Tac_Toe():
                 if self.is_gameover():
                     self.display_gameover()
                     # print('Done')
+
+        else:  # Play Again
+            self.canvas.delete("all")
+            self.play_again()
+            self.reset_board = False
+
+
+game_instance = Tic_Tac_Toe()
+game_instance.mainloop()
