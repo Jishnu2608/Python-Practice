@@ -61,3 +61,18 @@ def prefix_to_infix(expression):
             infix = f'({operand1}{char}{operand2})'
             stack.append(infix)
     return stack[0]
+
+def convert():
+    input_text = input_entry.get()
+    output_text.delete(1.0, tk.END)
+
+    if conversion_type.get() == "Infix to Postfix":
+        result = infix_to_postfix(input_text)
+    elif conversion_type.get() == "Infix to Prefix":
+        result = infix_to_prefix(input_text)
+    elif conversion_type.get() == "Postfix to Infix":
+        result = postfix_to_infix(input_text)
+    elif conversion_type.get() == "Prefix to Infix":
+        result = prefix_to_infix(input_text)
+
+    output_text.insert(tk.END, result)
