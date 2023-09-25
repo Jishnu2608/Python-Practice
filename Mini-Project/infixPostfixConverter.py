@@ -107,3 +107,11 @@ prefix_to_infix_radio.pack(side=tk.LEFT)
 
 convert_button = tk.Button(window, text="Convert", command=convert)
 convert_button.pack()
+
+output_label = tk.Label(window, text="Result:")
+output_label.pack()
+output_text = tk.Text(window, height=5, width=40)
+output_text.pack()
+
+# Run the application
+window.mainloop()
