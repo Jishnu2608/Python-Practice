@@ -76,3 +76,16 @@ def convert():
         result = prefix_to_infix(input_text)
 
     output_text.insert(tk.END, result)
+
+# Create the main window
+window = tk.Tk()
+window.title("Expression Converter")
+
+# Create and configure widgets
+input_label = tk.Label(window, text="Enter Expression:")
+input_label.pack()
+input_entry = tk.Entry(window)
+input_entry.pack()
+
+conversion_type = tk.StringVar()
+conversion_type.set("Infix to Postfix")
