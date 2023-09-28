@@ -37,3 +37,15 @@ def infix_to_prefix(expression):
     reversed_expression = re.sub(r'temp', ')', reversed_expression)
     postfix = infix_to_postfix(reversed_expression)
     return postfix[::-1]
+
+def postfix_to_infix(expression):
+    stack = []
+    for char in expression:
+        if char.isalnum():
+            stack.append(char)
+        else:
+            operand2 = stack.pop()
+            operand1 = stack.pop()
+            infix = f'({operand1}{char}{operand2})'
+            stack.append(infix)
+    return stack[0]
