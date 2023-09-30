@@ -49,3 +49,15 @@ def postfix_to_infix(expression):
             infix = f'({operand1}{char}{operand2})'
             stack.append(infix)
     return stack[0]
+
+def prefix_to_infix(expression):
+    stack = []
+    for char in expression[::-1]:
+        if char.isalnum():
+            stack.append(char)
+        else:
+            operand1 = stack.pop()
+            operand2 = stack.pop()
+            infix = f'({operand1}{char}{operand2})'
+            stack.append(infix)
+    return stack[0]
