@@ -92,17 +92,21 @@ conversion_type.set("Infix to Postfix")
 
 radio_frame = tk.Frame(window)
 radio_frame.pack()
-infix_to_postfix_radio = tk.Radiobutton(radio_frame, text="Infix to Postfix", variable=conversion_type,
-                                        value="Infix to Postfix")
+
+
+infix_to_postfix_radio = tk.Radiobutton(radio_frame, text="Infix to Postfix", variable=conversion_type, value="Infix to Postfix")
 infix_to_postfix_radio.pack(side=tk.LEFT)
-infix_to_prefix_radio = tk.Radiobutton(radio_frame, text="Infix to Prefix", variable=conversion_type,
-                                       value="Infix to Prefix")
+
+
+infix_to_prefix_radio = tk.Radiobutton(radio_frame, text="Infix to Prefix", variable=conversion_type, value="Infix to Prefix")
 infix_to_prefix_radio.pack(side=tk.LEFT)
-postfix_to_infix_radio = tk.Radiobutton(radio_frame, text="Postfix to Infix", variable=conversion_type,
-                                        value="Postfix to Infix")
+
+
+postfix_to_infix_radio = tk.Radiobutton(radio_frame, text="Postfix to Infix", variable=conversion_type, value="Postfix to Infix")
 postfix_to_infix_radio.pack(side=tk.LEFT)
-prefix_to_infix_radio = tk.Radiobutton(radio_frame, text="Prefix to Infix", variable=conversion_type,
-                                       value="Prefix to Infix")
+
+
+prefix_to_infix_radio = tk.Radiobutton(radio_frame, text="Prefix to Infix", variable=conversion_type, value="Prefix to Infix")
 prefix_to_infix_radio.pack(side=tk.LEFT)
 
 convert_button = tk.Button(window, text="Convert", command=convert)
